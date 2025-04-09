@@ -3,6 +3,14 @@ import MasonryGrid from "@/components/gallery/MasonryGrid";
 import { baseURL } from "@/app/resources";
 import { gallery, person } from "@/app/resources/content";
 
+// Add type definition for gallery images
+type GalleryImage = {
+  src: string;
+  alt: string;
+  width?: number;
+  height?: number;
+};
+
 export async function generateMetadata() {
   const title = gallery.title;
   const description = gallery.description;
@@ -33,6 +41,9 @@ export async function generateMetadata() {
 }
 
 export default function Gallery() {
+  // Type assertion for gallery.images
+  const images = gallery.images as GalleryImage[];
+
   return (
     <Flex fillWidth>
       <script
@@ -45,7 +56,7 @@ export default function Gallery() {
             name: gallery.title,
             description: gallery.description,
             url: `https://${baseURL}/gallery`,
-            image: gallery.images.map((image) => ({
+            image: images.map((image) => ({
               "@type": "ImageObject",
               url: `${baseURL}${image.src}`,
               description: image.alt,
