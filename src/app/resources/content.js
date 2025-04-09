@@ -14,14 +14,17 @@ const person = {
 
 const newsletter = {
   display: true,
-  title: <>Subscribe to {person.firstName}'s Newsletter</>,
+  title: <>Let’s Collaborate</>,
   description: (
     <>
-      I occasionally write about design, technology, and share thoughts on the intersection of
-      creativity and engineering.
+      Have an idea, project, or opportunity? I'm always open to collaborations and exciting challenges.
+      Reach out and let's make something amazing together.
     </>
   ),
+  buttonText: "Contact Me",
+  buttonLink: "mailto:manikantamaguluri1507@gmail.com",
 };
+
 
 const social = [
   // Links are automatically displayed.
