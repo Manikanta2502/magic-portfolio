@@ -1,0 +1,34 @@
+---
+title: "Emotion-Based Music Recommendation System"
+publishedAt: "2024-06-15"
+summary: "An AI-driven desktop application that recommends songs based on real-time facial emotion detection. Integrates a deep learning model with the Spotify API to deliver personalized music in five languages."
+link: "https://github.com/Manikanta2502/Music-Recommendation-Using-Emotion-Detection"
+---
+
+## Overview
+
+This project aims to personalize the music listening experience by recommending songs that match the user's emotional state. Using computer vision and deep learning, the system detects facial expressions through a webcam, identifies the user's emotion, and fetches song recommendations from Spotify accordingly. It supports five languages—English, Telugu, Tamil, Hindi, and Malayalam—making the music experience more culturally relatable and personalized.
+
+## Key Features
+
+- **Facial Emotion Recognition**: Utilizes a pre-trained deep learning model built with Keras to classify user emotions such as happy, sad, angry, and neutral in real-time.
+- **Multilingual Recommendations**: Offers music suggestions in five Indian languages to reflect cultural and linguistic diversity.
+- **Spotify Integration**: Connects to the Spotify API to fetch and play songs that align with the detected emotion.
+- **Desktop GUI**: Designed a lightweight and user-friendly interface using Tkinter for easy interaction.
+- **Real-Time Processing**: Provides emotion-based results with minimal delay, enhancing the user experience.
+
+## Technologies Used
+
+- **Python & Keras**: For emotion detection using image classification models.
+- **OpenCV**: For real-time webcam input and face detection.
+- **Spotify API**: To fetch mood-aligned song recommendations.
+- **Tkinter**: For building the desktop application interface.
+- **Multilingual Dataset**: For associating emotions with songs across five languages.
+
+## Challenges and Learnings
+
+A key challenge was achieving reliable emotion detection under varied lighting and facial orientations. Addressing this required experimenting with pre-processing techniques and optimizing the webcam feed. Integrating multilingual music recommendation logic also involved curating diverse song datasets and ensuring correct API queries. This project deepened my understanding of emotion-based AI applications, real-time data handling, and API-driven development.
+
+## Outcome
+
+The application achieved 76% accuracy in emotion detection and successfully recommended songs based on emotional states. It offers a practical solution to mood-based content delivery and has potential for integration into larger music platforms. The multilingual capability adds a unique, personalized touch, making it appealing to a broader user base.

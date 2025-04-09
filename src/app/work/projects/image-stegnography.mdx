@@ -1,0 +1,34 @@
+---
+title: "Steganography: Data Hiding in Images and Text Files"
+publishedAt: "2023-12-20"
+summary: "A Python-based steganography tool that enables users to securely hide and extract data within images and text files using the Least Significant Bit (LSB) technique. Designed for privacy and confidentiality, the tool ensures seamless data concealment and retrieval."
+link: "https://github.com/Manikanta2502/Steganography"
+---
+
+## Overview
+
+This project focuses on secure data concealment through steganography—hiding messages within digital files such as images and text. The tool leverages the Least Significant Bit (LSB) method to embed data without noticeably altering the carrier file. It offers a simple interface and powerful functionality for encoding and decoding information, making it ideal for scenarios requiring discreet communication or file-based encryption.
+
+## Key Features
+
+- **Image-Based Steganography**: Conceals text data within image pixels using the LSB algorithm, preserving the visual quality of the image.
+- **Text File Support**: Embeds and extracts hidden data within plain text files for lightweight, file-based secrecy.
+- **100% Data Concealment**: Ensures all provided data is securely embedded without corruption or loss.
+- **Enhanced Performance**: Optimized data embedding speed by 25% using OpenCV and efficient pixel manipulation.
+- **Simple CLI Interface**: Provides an easy-to-use command-line interface for both encoding and decoding operations.
+
+## Technologies Used
+
+- **Python**: Core language for building the tool.
+- **OpenCV (CV2)**: For reading, processing, and writing image files.
+- **NumPy & Pandas**: For managing image data and optimizing encoding/decoding logic.
+- **LSB Algorithm**: The main method for hiding data at the binary level.
+
+## Challenges and Learnings
+
+One of the primary challenges was ensuring that the embedding process didn’t degrade image quality or corrupt the original file. Implementing the LSB technique efficiently required a good understanding of image bit representation and manipulation. Additionally, error-handling mechanisms were crucial to prevent incorrect decoding or message loss. This project strengthened my understanding of image processing, file I/O, and practical cryptographic techniques.
+
+## Outcome
+
+The tool successfully achieved seamless data embedding and retrieval across both images and text files, with zero data loss. Its performance improvements and straightforward usage make it a valuable utility for privacy-conscious users or those exploring the intersection of cybersecurity and data science.
+    
