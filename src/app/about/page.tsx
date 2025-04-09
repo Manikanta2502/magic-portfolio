@@ -54,7 +54,7 @@ export default function About() {
     {
       title: about.work.title,
       display: about.work.display,
-      items: about.work.experiences.map((experience) => experience.company),
+      items: about.work.experiences?.map((experience) => experience?.company ?? "Unknown") ?? [],
     },
     {
       title: about.studies.title,
@@ -86,7 +86,7 @@ export default function About() {
               .map((item) => item.link),
             worksFor: {
               "@type": "Organization",
-              name: about.work.experiences[0].company || "",
+              name: about.work.experiences?.[0]?.company || "",
             },
           }),
         }}
@@ -209,67 +209,69 @@ export default function About() {
             </Column>
           )}
 
-          {about.work.display && (
-            <>
-              <Heading as="h2" id={about.work.title} variant="display-strong-s" marginBottom="m">
-                {about.work.title}
-              </Heading>
-              <Column fillWidth gap="l" marginBottom="40">
-                {about.work.experiences.map((experience, index) => (
-                  <Column key={`${experience.company}-${experience.role}-${index}`} fillWidth>
-                    <Flex fillWidth horizontal="space-between" vertical="end" marginBottom="4">
-                      <Text id={experience.company} variant="heading-strong-l">
-                        {experience.company}
-                      </Text>
-                      <Text variant="heading-default-xs" onBackground="neutral-weak">
-                        {experience.timeframe}
-                      </Text>
-                    </Flex>
-                    <Text variant="body-default-s" onBackground="brand-weak" marginBottom="m">
-                      {experience.role}
-                    </Text>
-                    <Column as="ul" gap="16">
-                      {experience.achievements.map((achievement: JSX.Element, index: number) => (
-                        <Text
-                          as="li"
-                          variant="body-default-m"
-                          key={`${experience.company}-${index}`}
-                        >
-                          {achievement}
-                        </Text>
-                      ))}
-                    </Column>
-                    {experience.images.length > 0 && (
-                      <Flex fillWidth paddingTop="m" paddingLeft="40" wrap>
-                        {experience.images.map((image, index) => (
-                          <Flex
-                            key={index}
-                            border="neutral-medium"
-                            radius="m"
-                            //@ts-ignore
-                            minWidth={image.width}
-                            //@ts-ignore
-                            height={image.height}
-                          >
-                            <SmartImage
-                              enlarge
-                              radius="m"
-                              //@ts-ignore
-                              sizes={image.width.toString()}
-                              //@ts-ignore
-                              alt={image.alt}
-                              //@ts-ignore
-                              src={image.src}
-                            />
-                          </Flex>
-                        ))}
-                      </Flex>
-                    )}
-                  </Column>
-                ))}
-              </Column>
-            </>
+{about.work.display && (
+  <>
+    <Heading as="h2" id={about.work.title} variant="display-strong-s" marginBottom="m">
+      {about.work.title}
+    </Heading>
+    <Column fillWidth gap="l" marginBottom="40">
+      {(about.work.experiences || []).map((experience, index) => (
+        <Column key={`${experience?.company || 'company'}-${experience?.role || 'role'}-${index}`} fillWidth>
+          <Flex fillWidth horizontal="space-between" vertical="end" marginBottom="4">
+            <Text id={experience?.company || ''} variant="heading-strong-l">
+              {experience?.company || 'Company'}
+            </Text>
+            <Text variant="heading-default-xs" onBackground="neutral-weak">
+              {experience?.timeframe || 'Timeframe'}
+            </Text>
+          </Flex>
+          <Text variant="body-default-s" onBackground="brand-weak" marginBottom="m">
+            {experience?.role || 'Role'}
+          </Text>
+          {(experience?.achievements || []).length > 0 && (
+            <Column as="ul" gap="16">
+              {experience?.achievements?.map((achievement: JSX.Element, achievementIndex: number) => (
+                <Text
+                  as="li"
+                  variant="body-default-m"
+                  key={`${experience?.company || 'company'}-${achievementIndex}`}
+                >
+                  {achievement}
+                </Text>
+              ))}
+            </Column>
           )}
+          {(experience?.images || []).length > 0 && (
+            <Flex fillWidth paddingTop="m" paddingLeft="40" wrap>
+              {experience?.images?.map((image, imageIndex) => (
+                <Flex
+                  key={imageIndex}
+                  border="neutral-medium"
+                  radius="m"
+                  //@ts-ignore
+                  minWidth={image?.width}
+                  //@ts-ignore
+                  height={image?.height}
+                >
+                  <SmartImage
+                    enlarge
+                    radius="m"
+                    //@ts-ignore
+                    sizes={image?.width?.toString()}
+                    //@ts-ignore
+                    alt={image?.alt}
+                    //@ts-ignore
+                    src={image?.src}
+                  />
+                </Flex>
+              ))}
+            </Flex>
+          )}
+        </Column>
+      ))}
+    </Column>
+  </>
+)}
 
           {about.studies.display && (
             <>
