@@ -1,0 +1,33 @@
+---
+title: "Hybrid Deepfake Detection with Telegram Bot Integration"
+publishedAt: "2025-04-01"
+summary: "Explore an AI-powered deepfake detection system that combines CNN and LSTM for spatial-temporal video analysis, with seamless Telegram bot integration for real-time verification."
+---
+
+## Overview
+
+This project aims to address the growing concern of deepfake videos by offering an intelligent, user-friendly solution that detects manipulated content using advanced AI techniques. By combining Convolutional Neural Networks (CNN) and Long Short-Term Memory (LSTM) models, the system analyzes both spatial and temporal features of video data to improve detection accuracy. Integrated with Telegram, it allows users to upload videos and receive deepfake analysis results instantly, without needing any technical expertise.
+
+## Key Features
+
+- **Hybrid Detection Model**: Combines CNN for frame-level spatial analysis and LSTM for detecting temporal inconsistencies across video frames.
+- **Telegram Bot Interface**: Users can simply upload a video to the bot, which processes it and responds with authenticity verification results.
+- **Real-Time Feedback**: Designed to deliver results quickly, typically within 30 seconds for short videos.
+- **User-Friendly**: Accessible to non-technical users through a clean and interactive chat-based experience.
+- **Scalable Architecture**: Modular backend design that allows future expansion to web or mobile platforms.
+
+## Technologies Used
+
+- **Python & Keras**: For building and training the hybrid deep learning model.
+- **OpenCV**: To extract and preprocess frames from video files.
+- **Telegram Bot API**: For handling media uploads, interactions, and result delivery.
+- **NumPy & Pandas**: For efficient frame data manipulation and preparation.
+- **Deepfake Datasets**: Publicly available datasets used for training and evaluation of the model.
+
+## Challenges and Learnings
+
+Developing a hybrid model that could balance spatial and temporal analysis presented challenges in synchronizing frame sequences and managing memory usage during inference. Integrating the AI model with a user-friendly Telegram bot required careful API handling and error management. This project enhanced my skills in temporal data processing, real-time inference systems, and bot development for AI applications.
+
+## Outcome
+
+The system achieved over 80% accuracy in identifying deepfakes in test environments and delivered near real-time results for short videos. It provides an accessible solution to a complex problem, demonstrating how AI and messaging platforms can work together to fight digital misinformation. Future enhancements include support for longer videos, model optimization, and integration with web dashboards for broader use cases.

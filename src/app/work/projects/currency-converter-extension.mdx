@@ -1,0 +1,34 @@
+---
+title: "Currency Converter Chrome Extension"
+publishedAt: "2025-06-01"
+summary: "A powerful and lightweight Chrome extension that detects and converts currency values in real-time on any webpage. Supports dynamic content, multiple currencies, and user customization."
+link: "https://github.com/Manikanta2502/Currency_Converter_Extension"
+---
+
+## Overview
+
+The Currency Converter Chrome Extension simplifies international browsing by automatically detecting and converting currency values on web pages in real-time. Designed with students, travelers, and professionals in mind, the extension integrates exchange rate APIs and smart parsing logic to handle a wide range of currency formats—offering seamless, on-the-fly conversion without disrupting the browsing experience.
+
+## Key Features
+
+- **Real-Time Currency Conversion**: Instantly converts detected currency values into the user’s preferred currency using live exchange rates.
+- **Dynamic Content Support**: Handles dynamically loaded text and JavaScript-rendered values, including AJAX-loaded or SPA content.
+- **Input Field Detection**: Detects and converts values inside input fields without affecting usability.
+- **User Preferences**: Allows users to set their preferred currency, rounding options, and display format via an intuitive popup UI.
+- **Highlight & Convert**: Supports selection-based conversion for values not automatically detected.
+
+## Technologies Used
+
+- **JavaScript**: Core scripting for DOM parsing, detection logic, and dynamic content observation.
+- **Chrome Extensions API**: For managing background scripts, content scripts, permissions, and user interaction.
+- **Exchange Rate API**: To fetch up-to-date currency exchange values.
+- **MutationObserver**: For watching and reacting to dynamically updated DOM elements.
+- **Tailwind CSS + HTML**: For styling the extension popup UI with a modern look and feel.
+
+## Challenges and Learnings
+
+One major challenge was building a parser that accurately identifies currency values in diverse formats (e.g., "Rs. 1,000", "$1,000.99", "1 000 €") without triggering false positives. Ensuring conversions work across dynamic and interactive elements like SPAs and form inputs required the use of MutationObservers and careful DOM traversal strategies. This project deepened my understanding of browser internals, extension architecture, and real-time data handling.
+
+## Outcome
+
+The extension successfully identifies and converts currency values on a wide range of websites and supports user customization. It's being optimized further for performance and scalability, with upcoming features like historical exchange rates, currency trend charts, and multi-language support. This project bridges the gap between browsing and real-world financial understanding with intelligent and user-centric functionality.
