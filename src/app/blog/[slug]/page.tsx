@@ -13,12 +13,21 @@ interface BlogParams {
   };
 }
 
+export async function generateStaticParams() {
+  // No blog slugs for now
+  return [];
+}
+/* This is for temporary purposes, as we don't have any blog posts yet.
+ * Once we have blog posts, we can uncomment this function to generate static params.
+
 export async function generateStaticParams(): Promise<{ slug: string }[]> {
   const posts = getPosts(["src", "app", "blog", "posts"]);
   return posts.map((post) => ({
     slug: post.slug,
   }));
 }
+
+*/
 
 export function generateMetadata({ params: { slug } }: BlogParams) {
   let post = getPosts(["src", "app", "blog", "posts"]).find((post) => post.slug === slug);
