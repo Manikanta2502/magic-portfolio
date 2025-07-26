@@ -6,7 +6,7 @@ const person = {
   get name() {
     return `${this.firstName} ${this.lastName}`;
   },
-  role: "Student",
+  role: "TDP Associate",
   avatar: "/images/avatar.jpg",
   location: "Asia/Kolkata", // Expecting the IANA time zone identifier, e.g., 'Europe/Vienna'
   languages: ["English", "Telugu","Hindi"], // optional: Leave the array empty if you don't want to display languages
@@ -55,11 +55,11 @@ const home = {
   label: "Home",
   title: `${person.name}'s Portfolio`,
   description: `Portfolio website showcasing my work as a ${person.role}`,
-  headline: <>Student and Upcoming SDE </>,
+  headline: <>Technology Development Program Associate </>,
   subline: (
     <>
-      I'm Manikanta, a Student at <InlineCode>SRM</InlineCode>, where I am specialized 
-      <br /> in Cyber Security. After hours, I work on my upskilling.
+      I'm Manikanta, a TDP Associate at <InlineCode>Optum.</InlineCode>
+      Just Graduated, excited to start working.
     </>
   ),
 };
@@ -84,9 +84,9 @@ const about = {
     title: "Introduction",
     description: (
       <>
-        Manikanta Maguluri,a Software Engineer passionate about building smart and reliable tech solutions. 
-        With hands-on experience in Python, cybersecurity, and DSA, 
-        I enjoy solving real-world problems and try new things in various domains.
+        A dedicated Software Engineer passionate about crafting intelligent and dependable technology solutions.
+        With a solid foundation in Python, cybersecurity, and Data Structures & Algorithms (DSA),
+        I am adept at tackling real-world challenges and exploring innovative approaches in diverse technical domains.
       </>
     ),
   },

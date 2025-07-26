@@ -2,7 +2,7 @@
 
 Welcome to my personal portfolio — a space where I showcase my work, share ideas, and highlight my journey as a developer.
 
-🔗 **Live Website:** [manikanta-maguluri.vercel.app](https://manikanta-maguluri.vercel.app)
+🔗 **Live Website:** [manikantamaguluri.live](https://manikanta-maguluri.vercel.app)
 
 ---
 

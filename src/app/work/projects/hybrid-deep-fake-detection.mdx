@@ -2,32 +2,33 @@
 title: "Hybrid Deepfake Detection with Telegram Bot Integration"
 publishedAt: "2025-04-01"
 summary: "Explore an AI-powered deepfake detection system that combines CNN and LSTM for spatial-temporal video analysis, with seamless Telegram bot integration for real-time verification."
+link: "https://drive.google.com/drive/folders/1iXRH8w47u1KEon86ABcl93qoqhu3I7C9?usp=drive_link"
 ---
-
+[Research Paper](https://ijisrt.com/hybrid-deepfake-detection-using-cnn-for-spatial-analysis-and-lstm-for-temporal-consistency)
 ## Overview
-
-This project aims to address the growing concern of deepfake videos by offering an intelligent, user-friendly solution that detects manipulated content using advanced AI techniques. By combining Convolutional Neural Networks (CNN) and Long Short-Term Memory (LSTM) models, the system analyzes both spatial and temporal features of video data to improve detection accuracy. Integrated with Telegram, it allows users to upload videos and receive deepfake analysis results instantly, without needing any technical expertise.
+This project presents a hybrid deep learning approach leveraging Convolutional Neural Networks (CNN) for spatial analysis and Long Short-Term Memory (LSTM) networks for temporal consistency to enhance deepfake detection accuracy. Deepfake technology, driven by advancements in artificial intelligence, enables the creation of highly realistic manipulated videos, posing significant threats to security, privacy, and misinformation. The proposed model offers a robust and scalable solution for deepfake detection, contributing to the fight against digital media manipulation and misinformation.
 
 ## Key Features
-
-- **Hybrid Detection Model**: Combines CNN for frame-level spatial analysis and LSTM for detecting temporal inconsistencies across video frames.
-- **Telegram Bot Interface**: Users can simply upload a video to the bot, which processes it and responds with authenticity verification results.
-- **Real-Time Feedback**: Designed to deliver results quickly, typically within 30 seconds for short videos.
-- **User-Friendly**: Accessible to non-technical users through a clean and interactive chat-based experience.
-- **Scalable Architecture**: Modular backend design that allows future expansion to web or mobile platforms.
+* **Hybrid Detection Model**: The study proposes a hybrid deep learning approach that leverages CNN for feature extraction and LSTM networks for temporal sequence analysis to enhance deepfake detection accuracy. The CNN model captures spatial inconsistencies and artifacts in individual frames, while the LSTM network analyzes sequential dependencies to detect temporal anomalies indicative of deepfakes.
+* **Telegram Bot Interface**: The deepfake detection system is seamlessly integrated with a Telegram bot interface, providing users with an accessible and interactive platform to upload video content and receive real-time authenticity assessments.
+* **Real-Time Feedback**: The Telegram bot integration allows users to easily share videos for quick analysis, and the system is optimized for real-time performance, enabling practical deployment in security applications and social media content moderation.
+* **User-Friendly**: The project seeks to address limitations by offering an accessible and efficient solution that integrates deepfake detection directly with a Telegram bot.
+* **Scalable Architecture**: The system’s modular architecture ensures scalability and reliability. Additionally, the model is optimized for deployment on cloud-based services, enabling large-scale detection and integration with multiple platforms.
 
 ## Technologies Used
-
-- **Python & Keras**: For building and training the hybrid deep learning model.
-- **OpenCV**: To extract and preprocess frames from video files.
-- **Telegram Bot API**: For handling media uploads, interactions, and result delivery.
-- **NumPy & Pandas**: For efficient frame data manipulation and preparation.
-- **Deepfake Datasets**: Publicly available datasets used for training and evaluation of the model.
+* **Python**: The detection system is developed using Python.
+* **Keras**: Keras is used for developing the detection system. 
+* **OpenCV**: OpenCV is utilized to extract frames from the uploaded video at regular intervals and for image augmentation.
+* **Telegram Bot API**: The Telegram bot interface is built using the Telegram API.
+* **NumPy**: NumPy is used for converting frames into arrays, which serve as direct input to the CNN.
+* **Deepfake Datasets**: Benchmark deepfake datasets such as FaceForensics++ and the Deepfake Detection Challenge dataset are utilized to ensure robustness.
 
 ## Challenges and Learnings
-
-Developing a hybrid model that could balance spatial and temporal analysis presented challenges in synchronizing frame sequences and managing memory usage during inference. Integrating the AI model with a user-friendly Telegram bot required careful API handling and error management. This project enhanced my skills in temporal data processing, real-time inference systems, and bot development for AI applications.
+* **Rapid evolution of generative AI technologies**: One of the critical limitations in existing approaches is the rapid evolution of generative AI technologies.
+* **Increasing sophistication of deepfake generation algorithms**: The increasing sophistication of deepfake generation algorithms poses a significant challenge.
+* **Limited computational resources for real-time detection**: Existing approaches face limitations due to limited computational resources for real-time detection.
+* **Scalability of detection mechanisms across diverse media formats**: Ensuring scalability of detection mechanisms across diverse media formats is another challenge.
+* **Balancing spatial and temporal analysis**: Developing a hybrid model that could balance spatial and temporal analysis presented challenges in synchronizing frame sequences and managing memory usage during inference.
 
 ## Outcome
-
-The system achieved over 80% accuracy in identifying deepfakes in test environments and delivered near real-time results for short videos. It provides an accessible solution to a complex problem, demonstrating how AI and messaging platforms can work together to fight digital misinformation. Future enhancements include support for longer videos, model optimization, and integration with web dashboards for broader use cases.
+The CNN-LSTM model achieved a remarkable 96.4% accuracy, with a precision of 94.8%, recall of 97.2%, and an F1-score of 96.0%. The ROC curve in Figure 2 demonstrates the model's superior performance, with an AUC (Area Under the Curve) of nearly 1.00, indicating exceptional accuracy. The system provides an accessible solution to a complex problem, demonstrating how AI and messaging platforms can work together to fight digital misinformation.
